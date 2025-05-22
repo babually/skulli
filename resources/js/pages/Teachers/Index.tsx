@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import AppLayout from "@/layouts/app-layout";
 import { type BreadcrumbItem } from "@/types";
-import { Head, Link, useForm, usePage } from "@inertiajs/react";
+import { Head, Link, useForm } from "@inertiajs/react";
 import { Megaphone } from "lucide-react";
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -37,8 +37,8 @@ interface PageProps {
     teachers: Teacher[]
 }
 
-export default function Index() {
-    const { teachers, flash } = usePage().props as unknown as PageProps;
+export default function Teachers({ teachers, flash }: PageProps) {
+    // const { teachers, flash } = usePage().props as unknown as PageProps;
 
     const {processing, delete: destroy} = useForm();
 

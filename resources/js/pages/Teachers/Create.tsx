@@ -31,7 +31,7 @@ type FormValues = {
 };
 
 
-export default function Index() {
+export default function CreateTeacher() {
     const form = useForm<FormValues>({
         defaultValues: {
             teacher_id: '',
